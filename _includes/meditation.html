@@ -1,0 +1,23 @@
+<section id="meditation" class="relative py-24 bg-gradient-to-r from-primary to-blue-900 text-white overflow-hidden">
+    <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10">
+    </div>
+    <div class="container mx-auto px-4 relative z-10 text-center">
+        <span class="material-symbols-outlined text-6xl text-secondary mb-4 animate-pulse">graphic_eq</span>
+        <h2 class="text-3xl font-serif font-bold mb-4">"Silenzio del Giubileo"</h2>
+        <p class="max-w-2xl mx-auto text-lg opacity-90 mb-8 italic">Ascolta la meditazione sonora dedicata
+            all'ultima Porta Santa.</p>
+
+        <div
+            class="max-w-2xl mx-auto bg-white/10 backdrop-blur-md rounded-full p-2 flex items-center gap-4 border border-white/20">
+            <button onclick="document.querySelector('audio').play()"
+                class="btn btn-circle btn-secondary text-primary shadow-lg border-none hover:scale-105">
+                <span class="material-symbols-outlined">play_arrow</span>
+            </button>
+            <div class="flex-grow pr-4">
+                <audio controls class="w-full h-8 custom-audio-dark bg-transparent">
+                    <source src="assets/Silenzio_del_Giubileo_l_ultima_Porta_Santa.m4a" type="audio/mp4">
+                </audio>
+            </div>
+        </div>
+    </div>
+</section>

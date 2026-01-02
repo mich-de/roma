@@ -1,0 +1,52 @@
+<section id="calendar" class="py-20 bg-base-100">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <span class="badge badge-secondary font-bold mb-4">Agenda 2024-2026</span>
+            <h2 class="text-4xl font-bold font-serif text-primary mb-4">Calendario Eventi Giubilari</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">I principali appuntamenti dell'Anno Santo, dalle aperture delle
+                Porte Sante ai grandi eventi giubilari.</p>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {% for event in site.data.jubilee_events %}
+            <div
+                class="card bg-base-200 shadow-xl hover:shadow-2xl transition-shadow duration-300 border-t-4 border-primary">
+                <div class="card-body p-6">
+                    <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                        <div class="badge badge-primary font-bold">{{ event.date }}</div>
+                        {% if event.time and event.time != "Orario non indicato" and event.time != "Orario non
+                        specificato" %}
+                        <div class="flex items-center text-xs font-mono text-gray-500 bg-base-100 px-2 py-1 rounded">
+                            <span class="material-symbols-outlined text-sm mr-1">schedule</span>
+                            {{ event.time }}
+                        </div>
+                        {% endif %}
+                    </div>
+
+                    <h3 class="card-title text-lg leading-snug mb-2 min-h-[3.5rem]">{{ event.title }}</h3>
+
+                    <div class="text-sm text-gray-600 mb-3 flex items-start gap-2">
+                        <span class="material-symbols-outlined text-primary mt-0.5 shrink-0">location_on</span>
+                        <span>{{ event.location }}</span>
+                    </div>
+
+                    <p class="text-gray-700 text-sm mb-4 grow">{{ event.description }}</p>
+
+                    <div class="divider my-0"></div>
+
+                    <div class="collapse collapse-arrow bg-base-100 rounded-box mt-2 border border-base-300">
+                        <input type="checkbox" />
+                        <div class="collapse-title text-sm font-medium py-3 min-h-0 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-secondary">directions_bus</span>
+                            Info Trasporti
+                        </div>
+                        <div class="collapse-content text-xs text-gray-600">
+                            <p class="pt-2">{{ event.transport }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
