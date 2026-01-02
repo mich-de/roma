@@ -1,19 +1,34 @@
-<section id="itinerary" class="py-20 bg-base-200">
-    <div class="container mx-auto px-4">
-        <div class="flex flex-col md:flex-row gap-12">
+<section id="itinerary" class="py-24 bg-gradient-to-b from-base-200 to-white relative overflow-hidden">
+    <!-- Background Decor -->
+    <div class="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2">
+    </div>
+    <div
+        class="absolute bottom-0 left-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2">
+    </div>
+
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="flex flex-col md:flex-row gap-16">
             <!-- Left Sticky Column -->
             <div class="md:w-1/3">
                 <div class="sticky top-24">
-                    <span class="badge badge-primary font-bold mb-4">Programma</span>
-                    <h2 class="text-4xl font-bold font-serif text-primary mb-6">Il Tuo<br>Cammino</h2>
-                    <p class="text-gray-600 mb-8">Un itinerario curato per vivere appieno la spiritualità del
-                        Giubileo e l'arte della nostra terra.</p>
+                    <span class="badge badge-primary font-bold mb-4 shadow-sm">Programma Ufficiale</span>
+                    <h2 class="text-5xl font-extrabold font-serif text-primary mb-6 leading-tight">Il Tuo<br><span
+                            class="text-secondary">Cammino</span></h2>
+                    <p class="text-gray-600 mb-8 text-lg leading-relaxed">Un itinerario curato nei minimi dettagli per
+                        vivere appieno la spiritualità del Giubileo e l'arte eterna della nostra terra.</p>
 
                     <!-- Map Card -->
-                    <div class="card bg-base-100 shadow-lg overflow-hidden h-64 w-full">
+                    <div
+                        class="card bg-base-100 shadow-2xl overflow-hidden h-72 w-full border-4 border-white transform hover:scale-[1.02] transition-transform duration-300">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d23762.618685864147!2d12.463299388277253!3d41.90216668783486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e3!4m5!1s0x132f61a15f013447%3A0x892e624c96924d08!2sEsquilino%2C+Rome%2C+Metropolitan+City+of+Rome+Capital!3m2!1d41.896265699999996!2d12.5031123!4m5!1s0x132f6054baeb30e1%3A0x5462828e67e3359d!2sPiazza+di+Spagna!3m2!1d41.9056975!2d12.4823272!5e0!3m2!1sen!2sit!4v1709470000000"
                             width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        <div class="absolute bottom-4 right-4">
+                            <a href="https://maps.app.goo.gl/kX8X8X8X8X8X8X8X" target="_blank"
+                                class="btn btn-sm btn-primary shadow-lg gap-2">
+                                <span class="material-symbols-outlined text-xs">open_in_new</span> Apri Mappa
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -21,74 +36,173 @@
             <!-- Right Timeline Column -->
             <div class="md:w-2/3">
                 <ul class="timeline timeline-vertical timeline-snap-icon max-md:timeline-compact timeline-vertical">
+
+                    <!-- STOP 1 -->
                     <li>
                         <div class="timeline-middle">
-                            <span
-                                class="bg-primary text-white rounded-full p-2 material-symbols-outlined">directions_bus</span>
+                            <div
+                                class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center shadow-lg ring-4 ring-base-100">
+                                <span class="material-symbols-outlined text-sm">directions_bus</span>
+                            </div>
                         </div>
-                        <div class="timeline-end mb-10 w-full pl-5">
-                            <time class="font-mono italic text-secondary font-bold">05:15</time>
-                            <div class="text-lg font-black text-primary">Partenza da Meta</div>
-                            <p class="text-gray-600">Ritrovo in Piazza Santa Maria del Lauro. Partenza bus ore 05:30
-                                tassativa.</p>
-                        </div>
-                        <hr class="bg-primary" />
-                    </li>
-                    <li>
-                        <hr class="bg-primary" />
-                        <div class="timeline-middle">
-                            <span class="bg-primary text-white rounded-full p-2 material-symbols-outlined">church</span>
-                        </div>
-                        <div class="timeline-end mb-10 w-full pl-5">
-                            <time class="font-mono italic text-secondary font-bold">09:30</time>
-                            <div class="text-lg font-black text-primary">Basilica S. Maria Maggiore</div>
-                            <p class="text-gray-600">Arrivo a Roma. Preghiera sulla tomba di <strong>Papa
-                                    Francesco</strong> e devozione alla <em>Salus Populi Romani</em>.</p>
-                            <div class="badge badge-warning text-xs mt-2">Porta Santa Chiusa</div>
-                        </div>
-                        <hr class="bg-primary" />
-                    </li>
-                    <li>
-                        <hr class="bg-primary" />
-                        <div class="timeline-middle">
-                            <span class="bg-primary text-white rounded-full p-2 material-symbols-outlined">subway</span>
-                        </div>
-                        <div class="timeline-end mb-10 w-full pl-5">
-                            <time class="font-mono italic text-secondary font-bold">11:00</time>
-                            <div class="text-lg font-black text-primary">Spostamento & Pranzo</div>
-                            <p class="text-gray-600">Metro A verso Piazza di Spagna. Tempo libero. Pranzo a sacco
-                                (consigliato Villa Borghese).</p>
-                        </div>
-                        <hr class="bg-primary" />
-                    </li>
-                    <li>
-                        <hr class="bg-primary" />
-                        <div class="timeline-middle">
-                            <span
-                                class="bg-secondary text-primary rounded-full p-2 material-symbols-outlined">door_front</span>
-                        </div>
-                        <div class="timeline-end mb-10 w-full pl-5">
-                            <time class="font-mono italic text-secondary font-bold">15:00</time>
-                            <div class="text-xl font-black text-secondary">Passaggio Porta Santa</div>
-                            <div class="card bg-white shadow-sm mt-3 border-l-4 border-secondary">
-                                <div class="card-body p-4">
-                                    <p class="text-gray-800">Ritrovo ore 14:00 a San Pietro. Ingresso solenne in
-                                        Basilica.</p>
+                        <div class="timeline-end mb-12 w-full pl-6 group">
+                            <div class="flex items-center gap-3 mb-1">
+                                <time class="font-mono italic text-secondary font-bold text-lg">05:15</time>
+                                <span class="badge badge-ghost badge-sm">Partenza</span>
+                            </div>
+                            <div
+                                class="card bg-white shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-300">
+                                <div class="card-body p-5">
+                                    <h3
+                                        class="text-xl font-bold text-primary group-hover:text-secondary transition-colors">
+                                        Partenza da Meta</h3>
+                                    <p class="text-gray-600 text-sm">Ritrovo in <strong>Piazza Santa Maria del
+                                            Lauro</strong>. Partenza bus ore 05:30 tassativa.</p>
+                                    <div class="card-actions justify-end mt-2">
+                                        <a href="https://maps.app.goo.gl/YourMapLinkHere" target="_blank"
+                                            class="btn btn-xs btn-ghost text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+                                            <span class="material-symbols-outlined text-sm">location_on</span> Naviga
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <hr class="bg-primary" />
+                        <hr class="bg-primary/20" />
                     </li>
+
+                    <!-- STOP 2 -->
                     <li>
-                        <hr class="bg-primary" />
+                        <hr class="bg-primary/20" />
                         <div class="timeline-middle">
-                            <span class="bg-primary text-white rounded-full p-2 material-symbols-outlined">star</span>
+                            <div
+                                class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center shadow-lg ring-4 ring-base-100">
+                                <span class="material-symbols-outlined text-sm">church</span>
+                            </div>
                         </div>
-                        <div class="timeline-end mb-10 w-full pl-5">
-                            <time class="font-mono italic text-secondary font-bold">A Seguire</time>
-                            <div class="text-lg font-black text-primary">Presepe di Iaccarino</div>
-                            <p class="text-gray-600">Visita al monumentale presepe in Piazza San Pietro realizzato
-                                dal maestro <strong>Federico Iaccarino</strong> di Meta.</p>
+                        <div class="timeline-end mb-12 w-full pl-6 group">
+                            <div class="flex items-center gap-3 mb-1">
+                                <time class="font-mono italic text-secondary font-bold text-lg">09:30</time>
+                            </div>
+                            <div
+                                class="card bg-white shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-300">
+                                <div class="card-body p-5">
+                                    <h3
+                                        class="text-xl font-bold text-primary group-hover:text-secondary transition-colors">
+                                        Basilica Papale S. Maria Maggiore</h3>
+                                    <p class="text-gray-600 text-sm">Arrivo a Roma. Momento di preghiera sulla tomba di
+                                        <strong>Papa Francesco</strong> e devozione dinanzi all'icona <em>Salus Populi
+                                            Romani</em>.</p>
+                                    <div class="flex gap-2 mt-3">
+                                        <div class="badge badge-warning badge-outline text-xs gap-1">
+                                            <span class="material-symbols-outlined text-[10px]">lock</span> Porta Santa
+                                            Chiusa
+                                        </div>
+                                    </div>
+                                    <div class="card-actions justify-end mt-2">
+                                        <a href="https://maps.app.goo.gl/YourMapLinkHere" target="_blank"
+                                            class="btn btn-xs btn-ghost text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+                                            <span class="material-symbols-outlined text-sm">location_on</span> Naviga
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="bg-primary/20" />
+                    </li>
+
+                    <!-- STOP 3 -->
+                    <li>
+                        <hr class="bg-primary/20" />
+                        <div class="timeline-middle">
+                            <div
+                                class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center shadow-lg ring-4 ring-base-100">
+                                <span class="material-symbols-outlined text-sm">subway</span>
+                            </div>
+                        </div>
+                        <div class="timeline-end mb-12 w-full pl-6 group">
+                            <div class="flex items-center gap-3 mb-1">
+                                <time class="font-mono italic text-secondary font-bold text-lg">11:00</time>
+                            </div>
+                            <div
+                                class="card bg-white shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-300">
+                                <div class="card-body p-5">
+                                    <h3
+                                        class="text-xl font-bold text-primary group-hover:text-secondary transition-colors">
+                                        Spostamento & Pranzo</h3>
+                                    <p class="text-gray-600 text-sm">Trasferimento con Metro A verso <strong>Piazza di
+                                            Spagna</strong>. Tempo libero per visita e pranzo a sacco (consigliato Villa
+                                        Borghese o zone limitrofe).</p>
+                                    <div class="card-actions justify-end mt-2">
+                                        <a href="https://maps.app.goo.gl/YourMapLinkHere" target="_blank"
+                                            class="btn btn-xs btn-ghost text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+                                            <span class="material-symbols-outlined text-sm">train</span> Metro A
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="bg-primary/20" />
+                    </li>
+
+                    <!-- STOP 4 -->
+                    <li>
+                        <hr class="bg-primary/20" />
+                        <div class="timeline-middle">
+                            <div
+                                class="w-12 h-12 bg-secondary text-white rounded-full flex items-center justify-center shadow-xl ring-4 ring-white z-10">
+                                <span class="material-symbols-outlined">door_front</span>
+                            </div>
+                        </div>
+                        <div class="timeline-end mb-12 w-full pl-6 group">
+                            <div class="flex items-center gap-3 mb-1">
+                                <time class="font-mono italic text-secondary font-bold text-xl">15:00</time>
+                                <span class="badge badge-secondary text-white shadow-sm">Highlight</span>
+                            </div>
+                            <div
+                                class="card bg-gradient-to-br from-white to-primary/5 border-l-4 border-secondary shadow-md hover:shadow-lg transition-all duration-300">
+                                <div class="card-body p-6">
+                                    <h3 class="text-2xl font-bold text-primary">Passaggio Porta Santa</h3>
+                                    <p class="text-gray-800 font-medium">Basilica di San Pietro in Vaticano</p>
+                                    <p class="text-gray-600 text-sm mt-2">Ritrovo ore 14:00 ai controlli di sicurezza.
+                                        Ingresso solenne in Basilica attraverso la Porta Santa.</p>
+
+                                    <div class="card-actions justify-end mt-4">
+                                        <a href="https://maps.app.goo.gl/YourMapLinkHere" target="_blank"
+                                            class="btn btn-sm btn-primary text-white shadow-md">
+                                            <span class="material-symbols-outlined text-sm">location_on</span>
+                                            Indicazioni
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="bg-primary/20" />
+                    </li>
+
+                    <!-- STOP 5 -->
+                    <li>
+                        <hr class="bg-primary/20" />
+                        <div class="timeline-middle">
+                            <div
+                                class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center shadow-lg ring-4 ring-base-100">
+                                <span class="material-symbols-outlined text-sm">star</span>
+                            </div>
+                        </div>
+                        <div class="timeline-end w-full pl-6 group">
+                            <div class="flex items-center gap-3 mb-1">
+                                <time class="font-mono italic text-secondary font-bold text-lg">A Seguire</time>
+                            </div>
+                            <div
+                                class="card bg-white shadow-sm border border-slate-100 hover:shadow-md transition-shadow duration-300">
+                                <div class="card-body p-5">
+                                    <h3
+                                        class="text-xl font-bold text-primary group-hover:text-secondary transition-colors">
+                                        Presepe "Tu Scendi dalle Stelle"</h3>
+                                    <p class="text-gray-600 text-sm">Visita al monumentale presepe in Piazza San Pietro
+                                        realizzato dal maestro <strong>Federico Iaccarino</strong>. Rientro previsto in
+                                        serata.</p>
+                                </div>
+                            </div>
                         </div>
                     </li>
                 </ul>
