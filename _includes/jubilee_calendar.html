@@ -7,46 +7,52 @@
                 Porte Sante ai grandi eventi giubilari.</p>
         </div>
 
-        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {% for event in site.data.jubilee_events %}
-            <div
-                class="card bg-base-200 shadow-xl hover:shadow-2xl transition-shadow duration-300 border-t-4 border-primary">
-                <div class="card-body p-6">
-                    <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
-                        <div class="badge badge-primary font-bold">{{ event.date }}</div>
-                        {% if event.time and event.time != "Orario non indicato" and event.time != "Orario non
-                        specificato" %}
-                        <div class="flex items-center text-xs font-mono text-gray-500 bg-base-100 px-2 py-1 rounded">
-                            <span class="material-symbols-outlined text-sm mr-1">schedule</span>
-                            {{ event.time }}
-                        </div>
-                        {% endif %}
-                    </div>
-
-                    <h3 class="card-title text-lg leading-snug mb-2 min-h-[3.5rem]">{{ event.title }}</h3>
-
-                    <div class="text-sm text-gray-600 mb-3 flex items-start gap-2">
-                        <span class="material-symbols-outlined text-primary mt-0.5 shrink-0">location_on</span>
-                        <span>{{ event.location }}</span>
-                    </div>
-
-                    <p class="text-gray-700 text-sm mb-4 grow">{{ event.description }}</p>
-
-                    <div class="divider my-0"></div>
-
-                    <div class="collapse collapse-arrow bg-base-100 rounded-box mt-2 border border-base-300">
-                        <input type="checkbox" />
-                        <div class="collapse-title text-sm font-medium py-3 min-h-0 flex items-center gap-2">
-                            <span class="material-symbols-outlined text-secondary">directions_bus</span>
-                            Info Trasporti
-                        </div>
-                        <div class="collapse-content text-xs text-gray-600">
-                            <p class="pt-2">{{ event.transport }}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
+        <div class="overflow-x-auto shadow-xl rounded-2xl bg-white border border-slate-100">
+            <table class="table table-zebra w-full">
+                <!-- head -->
+                <thead class="bg-primary text-white text-sm uppercase font-serif">
+                    <tr>
+                        <th class="py-4 pl-6">Data</th>
+                        <th class="py-4">Evento</th>
+                        <th class="py-4">Luogo</th>
+                        <th class="py-4 pr-6">Trasporti</th>
+                    </tr>
+                </thead>
+                <tbody class="text-gray-700">
+                    {% for event in site.data.jubilee_events %}
+                    <tr class="hover:bg-primary/5 transition-colors">
+                        <td class="pl-6 align-top whitespace-nowrap">
+                            <div class="badge badge-secondary font-bold shadow-sm mb-1">{{ event.date }}</div>
+                            {% if event.time and event.time != "Orario non indicato" and event.time != "Orario non
+                            specificato" %}
+                            <div class="flex items-center text-xs font-mono text-gray-500 mt-1">
+                                <span class="material-symbols-outlined text-[10px] mr-1">schedule</span>
+                                {{ event.time }}
+                            </div>
+                            {% endif %}
+                        </td>
+                        <td class="align-top">
+                            <div class="font-bold text-primary text-lg mb-1 leading-snug">{{ event.title }}</div>
+                            <p class="text-sm text-gray-600 leading-relaxed">{{ event.description }}</p>
+                        </td>
+                        <td class="align-top">
+                            <div class="flex items-start gap-1.5 text-sm font-medium">
+                                <span
+                                    class="material-symbols-outlined text-secondary text-lg leading-none">location_on</span>
+                                <span>{{ event.location }}</span>
+                            </div>
+                        </td>
+                        <td class="pr-6 align-top max-w-xs">
+                            <div
+                                class="flex items-start gap-2 text-xs text-gray-500 bg-slate-50 p-2 rounded-lg border border-slate-100">
+                                <span class="material-symbols-outlined text-sm shrink-0">directions_bus</span>
+                                <span>{{ event.transport }}</span>
+                            </div>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
         </div>
     </div>
 </section>
